@@ -24,6 +24,18 @@ functions:
       - http:
           path: accession
           method: get
+  getUUID:
+    handler: handler.get_uuid
+    events:
+      - http:
+          path: uuid
+          method: get
+  getSHA1:
+    handler: handler.get_sha1
+    events:
+      - http:
+          path: sha1
+          method: post
 
 resources:
   Resources:
