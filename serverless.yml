@@ -4,7 +4,8 @@ provider:
   name: aws
   runtime: python3.6
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    DYNAMODB_TABLE: "${self:service}-${opt:stage, self:provider.stage}-accessions"
+    FIELD_NAME: "last_accession"
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -26,18 +27,18 @@ functions:
 
 resources:
   Resources:
-    TodosDynamoDbTable:
+    AccessionsDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
-        AttributeDefinitions:
-          -
-            AttributeName: id
-            AttributeType: S
         KeySchema:
           -
             AttributeName: id
             KeyType: HASH
+        AttributeDefinitions:
+          -
+            AttributeName: id
+            AttributeType: S
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1

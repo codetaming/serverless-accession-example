@@ -1,0 +1,25 @@
+{
+  "name": "serverless-accession-example",
+  "version": "1.0.0",
+  "description": "Uses serverless AWS to provide accession numbers",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codetaming/serverless-accession-example.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/codetaming/serverless-accession-example/issues"
+  },
+  "homepage": "https://github.com/codetaming/serverless-accession-example#readme",
+  "dependencies": {
+    "aws-sdk": "^2.188.0",
+    "serverless-python-requirements": "^3.0.9"
+  },
+  "devDependencies": {
+    "serverless": "^1.26.0"
+  }
+}
