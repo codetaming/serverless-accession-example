@@ -3,7 +3,7 @@ Uses serverless AWS to provide accession numbers using a combination of API Gate
 
 No servers, highly scalable, highly available. 
 
-Cost approx $0.50 per million calls.
+Cost less than $0.50 per million calls.
 
 ## Get Sequenced Accession
 ```
