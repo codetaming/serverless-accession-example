@@ -1,0 +1,13 @@
+service: serverless-accession-example
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  getAccession:
+    handler: handler.get_accession
+    events:
+      - http:
+          path: accession
+          method: get
